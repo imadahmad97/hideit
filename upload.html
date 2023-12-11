@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PDF Upload</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .upload-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .upload-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .upload-btn:hover {
+            background-color: #45a049;
+        }
+
+        .file-input {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="upload-container">
+        <h2>Upload PDF</h2>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" class="file-input" accept=".pdf">
+            <input type="submit" value="Upload" class="upload-btn">
+        </form>
+    </div>
+</body>
+</html>
